@@ -25,3 +25,23 @@
 ## say goodbye
 * goodbye
   - utter_goodbye
+
+## New Story
+
+* greet
+    - action_greet
+* mood_great
+    - utter_happy
+* mood_great
+    - utter_goodbye
+* goodbye
+    - utter_goodbye
+* greet
+    - action_greet
+* greet
+    - action_default_fallback
+
+## Advanced greeting
+
+* bonjour
+    - utter_bonjour

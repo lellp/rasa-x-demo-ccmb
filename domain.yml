@@ -1,36 +1,45 @@
+session_config:
+  session_expiration_time: 0
+  carry_over_slots_to_new_session: true
 intents:
-- greet
+- bonjour
+- greet:
+    triggers: action_greet
 - goodbye
 - mood_affirm
 - mood_deny
 - mood_great
 - mood_unhappy
-
-templates:
+- interrogation
+slots:
+  category:
+    type: text
+responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: Hey! How are you?
     buttons:
-    - title: "great"
-      payload: "great"
-    - title: "super sad"
-      payload: "super sad"
-
+    - title: great
+      payload: great
+    - title: super sad
+      payload: super sad
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://cdn77.eatliver.com/wp-content/uploads/2017/10/trump-frog.jpg"
-
+  - text: 'Here is something to cheer you up:'
+    image: https://cdn77.eatliver.com/wp-content/uploads/2017/10/trump-frog.jpg
   utter_did_that_help:
-  - text: "Did that help you?"
-
+  - text: Did that help you?
   utter_happy:
-  - text: "Great carry on!"
-
+  - text: Great carry on!
   utter_goodbye:
-  - text: "Bye"
-
+  - text: Bye
+  utter_bonjour:
+  - text: bonjour monsieur !
+  - text: ''
 actions:
-- utter_greet
 - utter_cheer_up
 - utter_did_that_help
 - utter_happy
 - utter_goodbye
+- action_greet
+- action_get_news
+- utter_greet
+- utter_bonjour

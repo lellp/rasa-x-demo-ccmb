@@ -72,3 +72,9 @@
 - extremly sad
 - so saad
 - so sad
+
+## intent:interrogation
+- you are a bot there ?
+
+## intent:bonjour
+- bonjour
